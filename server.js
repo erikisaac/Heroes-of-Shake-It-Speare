@@ -17,6 +17,9 @@ var routes = require('./config/routes');
 app.use('/', routes);
 
 // Start server
-app.listen(3000, function() {
-	console.log("Listening at http://localhost:3000");
-});
+// app.listen(3000, function() {
+// 	console.log("Listening at http://localhost:3000");
+// });
+
+// Start Server for Heroku
+app.listen(process.env.PORT || 3000)
