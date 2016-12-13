@@ -20,7 +20,17 @@ console.log('Javascript online for the Players Page!');
 
 // http://shakeitspeare.com/api/sentence
 
+var y = "?!?!?";
+var x;
+
 var shakeItSpeareSentence = $.get('http://shakeitspeare.com/api/sentence').done(function(shakeItSpeareSentence){
 	// var shakeItSpeareSentenceParced = jQuery.parseJSON(shakeItSpeareSentence);
 	console.log("This is the Shake-It-Speare sentence: " + shakeItSpeareSentence.sentence);
+	x = shakeItSpeareSentence.sentence;
+	console.log("This is x from the function: " + x)
 });
+
+console.log("This is y: " + y);
+console.log("This is x from js: " + x) ; 
+
+// module.exports = x;
