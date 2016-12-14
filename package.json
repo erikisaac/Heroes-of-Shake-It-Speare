@@ -2,13 +2,9 @@
   "name": "Heroes-of-Shake-It-Speare",
   "version": "1.0.0",
   "description": "This is where the description will go.",
-  
-
   "engines": {
     "node": "6.9.1"
   },
-
-
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
