@@ -21,8 +21,6 @@
 
 // This works.
 // ToDo: [] Get the link to the heroModel.js working so that I can remove it from here. 
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/hosis");
 
 var Schema = mongoose.Schema;
 var HeroSchema = new Schema({
@@ -44,11 +42,10 @@ Hero.create({playerEmail: "zom@zombie.com (From Seed)", playerName: "Zom (From S
   console.log(hero);
 });
 
+Hero.create({playerEmail: "romeo@romeo.com (From Seed)", playerName: "Romeo (From Seed)", heroMantra: "Ambassadors from rome. (From Seed)", heroPower: 2}, function (err, hero) {
+  console.log(hero);
+});
 
-
-
-
-
-
-
-
+Hero.create({playerEmail: "seirdsisters@seirdsisters.com (From Seed)", playerName: "Weird Sisters (From Seed)", heroMantra: "Dunsinane he strongly fortifies. (From Seed)", heroPower: 1}, function (err, hero) {
+  console.log(hero);
+});

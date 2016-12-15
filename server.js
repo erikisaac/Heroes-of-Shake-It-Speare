@@ -2,6 +2,10 @@
 var express = require('express');
 var app = express();
 
+// NOTE: This was added to get the site to use the databace!
+var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/hosis");
+
 // Set up bodyParser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +23,10 @@ app.set('view engine', 'ejs');
 // Note: This is the route to the index page.
 var routes = require('./config/routes');
 app.use('/', routes);
+
+// This is atempting to let the makeHomePage.ejs access the database.
+var heroController = require("./controllers/heroController");
+app.get("/", heroController.index);
 
 // Start server
 // app.listen(3000, function() {

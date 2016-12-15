@@ -7,6 +7,7 @@ var HeroSchema = new Schema({
     heroMantra: String,
     heroPower: Number
 });
+
 var Hero = mongoose.model('Hero', HeroSchema);
 
 module.exports = Hero;
